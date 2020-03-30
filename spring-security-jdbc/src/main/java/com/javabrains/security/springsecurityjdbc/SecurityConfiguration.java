@@ -21,8 +21,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication()
-		.dataSource(dataSource)//Configure default with h2 embedded db
-		.withDefaultSchema()
+		.dataSource(dataSource);//Configure default with h2 embedded db
+		/*.withDefaultSchema()
 		.withUser(
 				User.withUsername("user")
 				.password("user")
@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				User.withUsername("admin")
 				.password("admin")
 				.roles("ADMIN")
-				);
+				);*/
 		
 	}
 	
